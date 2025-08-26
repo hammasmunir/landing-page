@@ -1310,6 +1310,13 @@ footer a {
     line-height: 40px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .item-row{
+    img{
+      display: none;
+    }
+  }
+}
 @media screen and (max-width: 500px) {
   .panel-topic-container {
     grid-template-columns: repeat(1, 1fr) !important;
@@ -1442,11 +1449,11 @@ footer a {
     padding: 30px 20px;
   }
   
-  .item-row, .item-green, .item-lg-green {
+  .item-row, .item-green, .item-lg-green,.item {
     grid-column: unset;
     grid-row: unset;
     aspect-ratio: auto;
-    min-height: 200px;
+    height: 200px;
   }
 
   .prev-events {
