@@ -1204,18 +1204,51 @@ footer a {
   .panel-topic-container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .item-row {
+    grid-row: span 1;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+  .item-green {
+    grid-column: span 1;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
 }
 @media screen and (max-width: 900px) {
   .panel-topic-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .item {
+    padding: 30px;
+  }
+  .item div h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .item-row h3 {
+    font-size: 36px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 500px) {
   .panel-topic-container {
     grid-template-columns: repeat(1, 1fr) !important;
-    .item-green{
-      grid-row: unset;
-    }
+    gap: 20px;
+  }
+  .item-green {
+    grid-row: unset;
+    grid-column: unset;
+  }
+  .item-lg-green {
+    grid-column: unset;
+  }
+  .item {
+    aspect-ratio: auto;
+    border-radius: 30px;
+    padding: 30px 20px;
+    min-height: 200px;
   }
 }
 @media (max-width: 1200px) {
@@ -1223,8 +1256,17 @@ footer a {
     padding: 0 60px;
   }
 
-
+  .panel-topic {
+    padding: 40px 20px;
+  }
   
+  .item div h3 {
+    font-size: 20px;
+  }
+  
+  .item div p {
+    font-size: 12px;
+  }
 
   .events {
     .event-info{
@@ -1260,8 +1302,26 @@ footer a {
     gap: 10px;
   }
 
-  .hero,.events {
+  .hero,.events,.panel-topic {
     padding: 40px 20px;
+  }
+  
+  .panel-topic-container {
+    gap: 15px;
+  }
+  
+  .item {
+    padding: 25px;
+    gap: 20px;
+  }
+  
+  .item div span {
+    font-size: 36px;
+  }
+  
+  .item div h3 {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .logo-container {
@@ -1296,6 +1356,19 @@ footer a {
 
   .panel-topic-container {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .item {
+    border-radius: 30px;
+    padding: 30px 20px;
+  }
+  
+  .item-row, .item-green, .item-lg-green {
+    grid-column: unset;
+    grid-row: unset;
+    aspect-ratio: auto;
+    min-height: 200px;
   }
 
   .prev-events {
@@ -1339,6 +1412,33 @@ footer a {
   .nav-container nav ul li a {
     padding: 6px 12px;
     font-size: 14px;
+  }
+  
+  .panel-topic {
+    padding: 30px 15px;
+  }
+  
+  .panel-topic-container {
+    gap: 12px;
+  }
+  
+  .item {
+    padding: 20px 15px;
+    min-height: 180px;
+  }
+  
+  .item div span {
+    font-size: 32px;
+  }
+  
+  .item div h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .item-row h3 {
+    font-size: 28px;
+    line-height: 32px;
   }
 
   .logo-container p {
