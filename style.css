@@ -55,19 +55,19 @@ body {
 
 .hero {
   background: #f7f7f7;
-  height: 900px;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 120px;
+  padding: 60px 40px;
 }
 
 .hero .hero-content {
-  max-width: 1637px;
+  max-width: 1600px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .spin {
@@ -87,6 +87,18 @@ body {
   font-size: 90px;
   font-weight: bolder;
 }
+.logo-container img:last-child{
+    max-width: 300px;
+    width: 100%;
+}
+
+.hero-right{
+  img{
+    max-width: 830px;
+    width: 100%;
+  }
+}
+
 
 .hero-left {
   display: flex;
@@ -125,21 +137,23 @@ body {
   background-position: right;
 }
 
-.how-to-join div {
+.how-to-join a {
   display: flex;
   align-items: center;
   gap: 22px;
   background: #ffffff;
   padding: 8px 7px 8px 40px;
   border-radius: 45px;
+  transition: all 0.5s ease;
+  color: black;
 }
 
-.how-to-join div p {
+.how-to-join a p {
   font-size: 18px;
   font-weight: 500;
 }
 
-.how-to-join div span {
+.how-to-join a span {
   background: #252525;
   border-radius: 50%;
   color: white;
@@ -149,8 +163,12 @@ body {
   transform: rotate(30deg);
   height: 56px;
   width: 56px;
+  transition: all 0.5s ease;
 }
 
+.how-to-join a:hover span{
+  transform: rotate(90deg);
+}
 .events {
   padding: 80px 120px;
   display: flex;
@@ -220,6 +238,8 @@ body {
   justify-content: space-between;
   gap: 30px;
   padding: 20px;
+  aspect-ratio: 1/1;
+  max-height: 300px;
 }
 
 .item span {
@@ -231,7 +251,7 @@ body {
 .item h3 {
   text-align: center;
   color: #252525;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 30px;
 }
 
@@ -851,5 +871,181 @@ footer a {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Large tablets & small desktops */
+@media screen and (max-width: 1300px) {
+  .hero .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    .hero-left{
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 60px;
+  }
+
+
+  
+
+  .events {
+    padding: 60px;
+  }
+
+  .panel-topic-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .community-container .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teams-info p {
+    font-size: 32px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-container nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-container p {
+    font-size: 48px;
+  }
+
+  .event-info, .event-desc {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .event-info p {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .event-desc p {
+    font-size: 18px;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .panel-topic-container {
+    grid-template-columns: 1fr;
+  }
+
+  .prev-events {
+    padding: 40px 20px;
+    h1{
+      font-size: 28px;
+    }
+  }
+
+  .slider {
+    height: auto;
+  }
+
+  .teams {
+    padding: 40px 20px;
+  }
+
+  .community {
+    padding: 40px 20px;
+  }
+
+  .community-container .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .price-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .nav-container nav ul li a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .logo-container p {
+    font-size: 32px;
+  }
+
+  .hero-text-container span,
+  .hero-text-container p {
+    font-size: 18px;
+  }
+
+  .how-to-join div p {
+    font-size: 14px;
+  }
+
+  .event-info p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .teams-info p {
+    font-size: 22px;
+  }
+
+  .community-container h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+
+  .pricing-container h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .price-card {
+    padding: 20px;
+  }
+
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 }
