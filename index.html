@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -50,34 +51,34 @@
             </a>
           </div>
         </div>
-        <div class="hero-right"><img src="/images/hero.png" alt="" /></div>
+        <div data-aos="fade-left" class="hero-right"><img src="/images/hero.png" alt="" /></div>
       </div>
     </section>
 
     <section id="about" class="events events-sec" id="scroll">
       <div class="events-container">
         <div class="event-info">
-          <p>
+          <p data-aos="fade-right">
             ВКЛЮЧЕТЕ СЕ В <span>СПЕЦИАЛНОТО</span> <span>СЪБИТИЕ</span> НА ИМОТНА МАШИНА, ПОСВЕТЕНО
             НА ВЛИЯНИЕТО НА ВЛИЗАНЕТО НА <span>БЪЛГАРИЯ В</span> <span>ЕВРОЗОНАТА</span> ВЪРХУ
             ПАЗАРА НА НЕДВИЖИМИ ИМОТИ.
           </p>
-          <img src="/images/events.png" alt="" />
+          <img data-aos="fade-left" src="/images/events.png" alt="" />
         </div>
         <div class="event-desc">
-          <p>
+          <p data-aos="fade-right">
             Очаквайте прогнози за следващите 5 години, топ квартали за инвестиции в София и работещи
             стратегии за умно позициониране в новата икономическа реалност. На събитието ще чуете
             експертни анализи, реални казуси и практически насоки от водещи професионалисти в
             сектора.
           </p>
-          <img src="/images/event-info.png" alt="" />
+          <img data-aos="fade-left" src="/images/event-info.png" alt="" />
         </div>
       </div>
     </section>
 
     <section id="topics" class="panel-topic">
-      <div class="panel-topic-container">
+      <div data-aos="fade-right" class="panel-topic-container">
         <div class="item item-row">
           <img src="/images/panel-topic.png" alt="" />
           <h3>ТЕМИ НА ПАНЕЛИТЕ</h3>
@@ -152,71 +153,58 @@
       </div>
     </section>
     <section id="partners" class="prev-events">
-      <div class="prev-events-container">
+      <div data-aos="fade-left" class="prev-events-container">
         <h1>
           УЧАСТНИЦИТЕ В ПРЕДХОДНИТЕ СЪБИТИЯ <br />
           НА <span>ИМОТНА МАШИНА</span>
         </h1>
-        <div class="slider">
-          <i class="fa-solid fa-chevron-left"></i>
-          <ul>
-            <li>
-              <video
-                class="video-slide"
-                loop
-                muted
-                src="/images/Daredevil [Hindi]-S1E1-720P - Trim.mp4"
-              ></video>
-              <button class="playPauseBtn">
-                <i id="play-button" class="fa-solid fa-play"></i>
-              </button>
-            </li>
-            <li>
-              <video
-                class="video-slide"
-                loop
-                muted
-                src="/images/Daredevil [Hindi]-S1E1-720P - Trim.mp4"
-              ></video>
-              <button class="playPauseBtn">
-                <i id="play-button" class="fa-solid fa-play"></i>
-              </button>
-            </li>
-            <li class="active">
-              <video
-                class="video-slide"
-                loop
-                muted
-                src="/images/Daredevil [Hindi]-S1E1-720P - Trim.mp4"
-              ></video>
-              <button class="playPauseBtn">
-                <i id="play-button" class="fa-solid fa-play"></i>
-              </button>
-            </li>
-            <li>
-              <video
-                class="video-slide"
-                loop
-                muted
-                src="/images/Daredevil [Hindi]-S1E1-720P - Trim.mp4"
-              ></video>
-              <button class="playPauseBtn">
-                <i id="play-button" class="fa-solid fa-play"></i>
-              </button>
-            </li>
-            <li>
-              <video
-                class="video-slide"
-                loop
-                muted
-                src="/images/Daredevil [Hindi]-S1E1-720P - Trim.mp4"
-              ></video>
-              <button class="playPauseBtn">
-                <i id="play-button" class="fa-solid fa-play"></i>
-              </button>
-            </li>
-          </ul>
-          <i class="fa-solid fa-chevron-right"></i>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel-track-container">
+            <ul class="carousel-track">
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+              <li class="carousel-item">
+                <video src="./images/Daredevil [Hindi]-S1E1-720P - Trim.mp4" muted></video>
+                <button class="play-btn">&#9658;</button>
+              </li>
+            </ul>
+          </div>
+          <button class="next">&#10095;</button>
         </div>
         <p>
           Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero,
@@ -229,8 +217,26 @@
     </section>
 
     <section id="team" class="teams">
-      <div class="teams-container">
+      <div data-aos="fade-right" class="teams-container">
         <div class="member-container">
+          <div class="member">
+            <div>
+              <img src="./images/member.png" alt="" />
+              <h3>
+                ИВО <br />
+                ДИМОВСКИ
+              </h3>
+              <p>
+                Професионален инвеститор в имоти с над 10 години опит в България, Германия и
+                Швейцария. Работил за световни компании като Adidas и Vodafone. Ръководил е огромни
+                екипи …
+              </p>
+            </div>
+            <p>
+              RE: THINK FORUM <br />
+              2025
+            </p>
+          </div>
           <div class="member">
             <div>
               <img src="./images/member.png" alt="" />
@@ -305,7 +311,7 @@
       <div class="pricing-container">
         <h3>Купи билет</h3>
         <div class="price-cards-container">
-          <div class="price-card">
+          <div data-aos="fade-right" class="price-card">
             <span>Билет за:</span>
             <p>RE: THINK 2025</p>
             <div class="price">
@@ -330,7 +336,7 @@
             </div>
             <button>КУПИ БИЛЕТ <i class="fa-solid fa-arrow-right"></i></button>
           </div>
-          <div class="price-card premium">
+          <div data-aos="fade-left" class="price-card premium">
             <span>Билет за:</span>
             <p>RE: THINK 2025</p>
             <div class="price">
@@ -360,7 +366,7 @@
     </section>
 
     <section class="footer">
-      <footer>
+      <footer data-aos="fade-left">
         <img src="/images/logo.png" alt="" />
         <p>office [@] imotnamashina.bg</p>
         <a href="#">Facebook</a>
@@ -368,6 +374,7 @@
         <a href="#">YouTube</a>
       </footer>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>

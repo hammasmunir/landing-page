@@ -63,7 +63,7 @@ nav ul li a {
   transition: all 0.5s ease;
   &:hover {
     background: #135945;
-    border: none;
+    border: 1px solid transparent;
     color: var(--secondary-color);
   }
 }
@@ -162,7 +162,7 @@ nav ul li a {
   transition: all;
   height: 99px;
   width: 99px;
-  animation: spin 4s linear infinite;
+  animation: spin 8s linear infinite;
 }
 
 .logo-container {
@@ -716,6 +716,7 @@ nav ul li a {
 
 .member-container {
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -1186,6 +1187,10 @@ nav ul li a {
   border-radius: 70px;
   gap: 13px;
   border: 0;
+  transition: all 0.5s ease;
+  &:hover {
+    scale: 1.1;
+  }
 }
 
 .premium {
@@ -1554,4 +1559,123 @@ footer a {
     left: unset !important;
     right: 0;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05); /* thoda zoom-in effect start */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* normal size */
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* gap: 100px; */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-item {
+  min-width: calc((100% - 100px) / 5); /* Show 5 items */
+  /* flex: 0 0 auto; */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carousel-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  pointer-events: none; /* prevent drag on video */
+}
+
+/* Scale effect for center video */
+.carousel-item.center {
+  transform: scale(2.2);
+  z-index: 5;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+button.next {
+  right: 10px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.play-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.carousel-item.center button {
+  display: block; /* show button only for the centered item */
 }
