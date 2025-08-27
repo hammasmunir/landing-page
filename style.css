@@ -257,6 +257,7 @@ nav ul li a {
   gap: 22px;
   background: #ffffff;
   padding: 8px 7px 8px 40px;
+
   border-radius: 45px;
   transition: all 0.5s ease;
   color: black;
@@ -278,6 +279,8 @@ nav ul li a {
   height: 56px;
   width: 56px;
   transition: all 0.5s ease;
+  flex-grow: 1;
+  aspect-ratio: 1/1;
 }
 
 .how-to-join a:hover span {
