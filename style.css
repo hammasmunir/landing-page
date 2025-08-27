@@ -298,6 +298,7 @@ nav ul li a {
 .event-info {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .event-info p {
@@ -1719,10 +1720,10 @@ button.next {
 }
 
 button.prev {
-  left: 10px;
+  left: calc(50% - 320px);
 }
 button.next {
-  right: 10px;
+  right: calc(50% - 320px);
 }
 
 .video-wrapper {
