@@ -1659,7 +1659,6 @@ footer a {
 .carousel-item.center {
   transform: scale(1.4);
   z-index: 5;
-
 }
 
 /* Breakpoints for responsive carousel */
@@ -1692,7 +1691,7 @@ footer a {
     --n: 2;
   }
   .carousel-item.center {
-    transform: scale(1.5);
+    transform: unset;
   }
   .carousel-container {
     height: 240px;
@@ -1711,12 +1710,16 @@ footer a {
   }
 }
 
+button.prev img {
+  transform: rotate(180deg);
+}
+
 button.prev,
 button.next {
   position: absolute;
   top: 50%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1730,15 +1733,15 @@ button.next {
   border-radius: 50%;
   z-index: 10;
 }
-@media screen and (min-width:1280px) {
+@media screen and (min-width: 1280px) {
   button.prev {
     left: 35%;
   }
   button.next {
-    right: 35%
+    right: 35%;
   }
 }
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
   button.prev {
     left: calc(100%-40px);
   }
