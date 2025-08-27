@@ -382,11 +382,14 @@ nav ul li a {
   grid-column: span 2;
   aspect-ratio: unset;
   border-radius: 200px;
+  span {
+    color: #237851 !important;
+  }
   h3 {
-    color: #fff !important;
+    color: white !important;
   }
   p {
-    color: var(--light-text);
+    color: #237851 !important;
   }
 }
 .item-lg-green {
