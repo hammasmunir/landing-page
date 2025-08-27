@@ -1332,6 +1332,7 @@ footer a {
 }
 @media screen and (max-width: 768px) {
   .remaining p {
+    white-space: nowrap;
     font-size: 12px !important;
   }
 }
