@@ -1569,12 +1569,7 @@ footer a {
 }
 
 @media screen and (max-width: 1024px) {
-  .prev-events-container {
-    li:not(.active) {
-      display: none;
-      margin: 0 auto;
-    }
-  }
+  /* Keep arrows aligned if old .slider is used elsewhere */
   .slider .fa-solid {
     left: 0;
     z-index: 20;
@@ -1618,17 +1613,20 @@ footer a {
 }
 
 .carousel-track {
+  /* Responsive controls */
+  --n: 5; /* visible slides */
+  --gap: 20px; /* gap between slides */
   display: flex;
   transition: transform 0.5s ease;
-  gap: 20px;
+  gap: var(--gap);
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .carousel-item {
-  min-width: calc((100% - 100px) / 5); /* Show 5 items */
-  /* flex: 0 0 auto; */
+  /* Show N items responsively: (100% - total gaps) / N */
+  min-width: calc((100% - (var(--gap) * (var(--n) - 1))) / var(--n));
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -1647,6 +1645,55 @@ footer a {
 .carousel-item.center {
   transform: scale(2.2);
   z-index: 5;
+}
+
+/* Breakpoints for responsive carousel */
+@media (max-width: 1280px) {
+  .carousel-track {
+    --n: 4;
+  }
+  .carousel-item.center {
+    transform: scale(2);
+  }
+  .carousel-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel-track {
+    --n: 3;
+  }
+  .carousel-item.center {
+    transform: scale(1.8);
+  }
+  .carousel-container {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    --n: 2;
+  }
+  .carousel-item.center {
+    transform: scale(1.5);
+  }
+  .carousel-container {
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-track {
+    --n: 1;
+  }
+  .carousel-item.center {
+    transform: scale(1.2);
+  }
+  .carousel-container {
+    height: 220px;
+  }
 }
 
 button.prev,

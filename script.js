@@ -178,10 +178,28 @@ const slides = Array.from(track.children);
 const nextButton = document.querySelector('.next');
 const prevButton = document.querySelector('.prev');
 
-const visibleSlides = 5;
+let visibleSlides = 5; // will be updated responsively
 const totalSlides = slides.length;
-const slideWidth = slides[0].getBoundingClientRect().width + 20;
+let slideWidth = slides[0].getBoundingClientRect().width + getGap();
 let currentIndex = 0;
+
+function getGap() {
+  const styles = window.getComputedStyle(track);
+  const gapValue = styles.gap || '20px';
+  return parseFloat(gapValue);
+}
+
+function getVisibleSlides() {
+  const styles = window.getComputedStyle(track);
+  const n = styles.getPropertyValue('--n');
+  const parsed = parseInt(n, 10);
+  return isNaN(parsed) ? 5 : parsed;
+}
+
+function recalcDimensions() {
+  visibleSlides = getVisibleSlides();
+  slideWidth = slides[0].getBoundingClientRect().width + getGap();
+}
 
 // Stop all videos and hide buttons
 function stopAllVideos(exceptSlide = null) {
@@ -196,6 +214,10 @@ function stopAllVideos(exceptSlide = null) {
 
 // Update carousel position
 function updateCarousel() {
+  recalcDimensions();
+  const maxIndex = Math.max(0, totalSlides - visibleSlides);
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+  if (currentIndex < 0) currentIndex = 0;
   track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   updateCenterSlide();
 }
@@ -300,10 +322,8 @@ function dragEnd() {
   cancelAnimationFrame(animationID);
   track.style.transition = 'transform 0.5s ease';
   const movedBy = currentTranslate - prevTranslate;
-
   if (movedBy < -50 && currentIndex < totalSlides - visibleSlides) currentIndex++;
   if (movedBy > 50 && currentIndex > 0) currentIndex--;
-
   if (currentIndex > totalSlides - visibleSlides) currentIndex = totalSlides - visibleSlides;
   if (currentIndex < 0) currentIndex = 0;
 
@@ -333,3 +353,25 @@ function setSliderPosition() {
 
 // Initialize carousel
 updateCarousel();
+
+// Recalculate on resize/orientation change for responsiveness
+window.addEventListener('resize', () => {
+  updateCarousel();
+});
+
+// Autoplay the initial center video if present
+window.addEventListener('load', () => {
+  updateCarousel();
+  const centerIndex = currentIndex + Math.floor(visibleSlides / 2);
+  const centerSlide = slides[centerIndex];
+  if (centerSlide) {
+    const video = centerSlide.querySelector('video');
+    const btn = centerSlide.querySelector('.play-btn');
+    if (video) {
+      video.play().catch(() => {
+        if (btn) btn.style.display = 'flex';
+      });
+      if (btn) btn.style.display = 'none';
+    }
+  }
+});
