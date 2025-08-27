@@ -25,6 +25,9 @@ body {
   background: #fff;
   font-family: 'Quasimoda';
 }
+html {
+  scroll-behavior: smooth;
+}
 .header {
   background: #f7f7f7;
   display: flex;
