@@ -327,6 +327,7 @@ nav ul li a {
 
 .panel-topic {
   padding: 60px 40px;
+  padding-bottom: 130px;
   display: flex;
   justify-content: center;
 }
@@ -1357,6 +1358,7 @@ footer a {
 
   .panel-topic {
     padding: 40px 20px;
+    padding-bottom: 120px;
   }
 
   .item div h3 {
@@ -1754,4 +1756,37 @@ button.next {
 }
 .carousel-item.center button {
   display: block; /* show button only for the centered item */
+}
+.bg-container {
+  position: relative;
+  background: #000;
+  width: 296px;
+  width: 100%;
+}
+
+.bg-image {
+  position: absolute;
+  right: 3%;
+  width: 296px;
+  top: -140px;
+}
+
+.bg-image img {
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .bg-image {
+    top: -100px;
+    width: 200px;
+  }
+  .panel-topic {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-container {
+    display: none;
+  }
 }
