@@ -1331,6 +1331,9 @@ footer a {
   }
 }
 @media screen and (max-width: 768px) {
+  .about-image {
+    display: none;
+  }
   .remaining p {
     white-space: nowrap;
     font-size: 12px !important;
