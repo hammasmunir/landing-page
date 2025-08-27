@@ -1706,8 +1706,13 @@ footer a {
   .carousel-track {
     --n: 1;
   }
+  .carousel-track-container {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
   .carousel-item.center {
-    transform: scale(1.2);
+    transform: unset;
   }
   .carousel-container {
     height: 220px;
