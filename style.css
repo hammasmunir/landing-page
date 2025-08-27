@@ -187,6 +187,31 @@ nav ul li a {
     width: 100%;
   }
 }
+.about-right {
+  img {
+    max-width: 600px;
+    /* width: 100%; */
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1480px) {
+  .hero-right img {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .hero-right img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .hero-right img {
+    max-width: 600px;
+  }
+}
 
 .hero-left {
   display: flex;
@@ -276,7 +301,7 @@ nav ul li a {
 }
 
 .event-info p {
-  font-size: 47px;
+  font-size: 40px;
   color: #252525;
   line-height: 66px;
 }
