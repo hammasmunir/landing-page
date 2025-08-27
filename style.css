@@ -729,11 +729,21 @@ nav ul li a {
 .teams {
   width: 100%;
   padding: 70px 120px;
-  background: url(./images/team.png);
-  background-position: top;
-  background-repeat: no-repeat;
+
+  position: relative;
   display: flex;
   justify-content: center;
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    width: 100%;
+    /* max-width: 80%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
 }
 
 .teams-container {
@@ -743,6 +753,7 @@ nav ul li a {
   align-items: center;
   flex-direction: column;
   gap: 67px;
+  z-index: 9;
 }
 
 .member-container {
@@ -1646,8 +1657,9 @@ footer a {
 
 /* Scale effect for center video */
 .carousel-item.center {
-  transform: scale(2.2);
+  transform: scale(1.4);
   z-index: 5;
+
 }
 
 /* Breakpoints for responsive carousel */
@@ -1718,12 +1730,21 @@ button.next {
   border-radius: 50%;
   z-index: 10;
 }
-
-button.prev {
-  left: calc(50% - 320px);
+@media screen and (min-width:1280px) {
+  button.prev {
+    left: 35%;
+  }
+  button.next {
+    right: 35%
+  }
 }
-button.next {
-  right: calc(50% - 320px);
+@media screen and (max-width:1280px) {
+  button.prev {
+    left: calc(100%-40px);
+  }
+  button.next {
+    right: 0%;
+  }
 }
 
 .video-wrapper {
