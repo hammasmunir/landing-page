@@ -1330,6 +1330,11 @@ footer a {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .remaining p {
+    font-size: 12px !important;
+  }
+}
 @media screen and (max-width: 1400px) {
   .panel-topic-container {
     grid-template-columns: repeat(3, 1fr);
