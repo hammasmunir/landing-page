@@ -1357,6 +1357,10 @@ footer a {
      border-radius: 60px;
      height: unset;
     }
+    .item-row{
+     h3,p{
+      text-align: center;
+     }
    }
 }
 @media screen and (max-width: 991px) {
