@@ -1355,6 +1355,7 @@ footer a {
     .item{
      aspect-ratio: unset;
      border-radius: 60px;
+     height: unset;
     }
    }
 }
