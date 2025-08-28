@@ -1363,8 +1363,6 @@ footer a {
      }
    }
 }
-@media screen and (max-width: 991px) {
- 
 }
 @media screen and (max-width: 900px) {
   .item {
@@ -1939,5 +1937,32 @@ button.next {
   
   .owl-nav .owl-next {
     right: 20px;
+  }
+
+  .header nav{
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff40;
+    padding: 20px;
+    backdrop-filter: blur(18px);
+    ul{
+      width: 100%;
+      li,a{
+        width: 100%;
+      }
+    }
+    li a{
+      background: transparent;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 0;
+      border-bottom: 1px solid #b6b6b6;
+      padding: 20px;
+      &:hover{
+        color: var(--dark-secondary);
+        border: none;
+        background: transparent;
+      }
+    }
   }
 }
