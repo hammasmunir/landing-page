@@ -1000,6 +1000,8 @@ nav ul li a {
   transition: width 0.1s linear;
 }
 
+
+
 @media screen and (max-width: 1024px) {
   .community {
     padding: 40px 20px;
@@ -1019,9 +1021,7 @@ nav ul li a {
   .teams {
     padding: 40px 40px;
   }
-  .panel-topic-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
 }
 
 @media screen and (max-width: 786px) {
@@ -1317,7 +1317,9 @@ footer a {
     transform: rotate(360deg);
   }
 }
-
+.about-image {
+  object-fit: contain;
+}
 /* ===================== RESPONSIVE ===================== */
 
 /* Large tablets & small desktops */
@@ -1345,6 +1347,20 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (max-width: 1200px) {
+  .panel-topic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .item{
+     aspect-ratio: unset;
+     border-radius: 60px;
+    }
+   }
+}
+@media screen and (max-width: 991px) {
+ 
+}
 @media screen and (max-width: 900px) {
   .item {
     padding: 30px;
@@ -1366,10 +1382,7 @@ footer a {
   .item-lg-green {
     grid-column: unset;
   }
-  .panel-topic-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
+ 
   .item {
     aspect-ratio: auto;
     border-radius: 30px;
@@ -1427,10 +1440,6 @@ footer a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-  }
-
-  .panel-topic-container {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero,
