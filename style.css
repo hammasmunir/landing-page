@@ -189,6 +189,10 @@ nav ul li a {
   }
 }
 
+.black{
+  color: #000000;
+}
+
 .hamburger {
   display: none;
   font-size: 28px;
@@ -198,6 +202,13 @@ nav ul li a {
 
 .side-img img {
   width: 180px;
+}
+.break{
+  width: 100%;
+  max-width: 52px;
+  background-color: #EBEBEB;
+  height: 2px;
+  border-radius: 100px;
 }
 
 /* Mobile Styles */
@@ -810,11 +821,11 @@ nav ul li a {
   color: white;
   padding: 20px;
   gap: 10px;
-}
+  img{
+    width: 100%;
+    max-width: 250px;
 
-.card-2 .img-conatiner .img {
-  width: 58px;
-  height: 58px;
+  }
 }
 
 .card-2 .img-conatiner h3 {
@@ -826,9 +837,9 @@ nav ul li a {
 .card-2 .blur-container {
   background-color: rgba(253, 253, 253, 0.2);
   color: white;
-  padding: 60px 24px;
+  padding: 40px 24px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -902,7 +913,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
 }
 
 .member div {
@@ -921,6 +932,7 @@ nav ul li a {
   font-size: 14px;
   color: #605f5f;
   text-align: center;
+
 }
 
 .member p {
@@ -932,7 +944,10 @@ nav ul li a {
 .member div img {
   width: 100%;
 }
-
+.member .event-name{
+  font-size: 12px;
+  margin-bottom: 20px;
+}
 .teams-info {
   display: flex;
   flex-direction: column;
@@ -1294,14 +1309,41 @@ nav ul li a {
 .price-card .price {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+}
+.price-card {
+  h4{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url("./images/divider-lime.svg") no-repeat center center;
+    }
+  }
+
+  .premium-heading{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url("./images/green-divider.svg") no-repeat center center;
+    }
+  }
 }
 
 .price-card h3 {
   padding: 0 24px;
   color: var(--tertiary-color);
   font-size: 47px;
-  font-weight: 600;
+  font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .price-card h4 {
@@ -1309,7 +1351,8 @@ nav ul li a {
   background: var(--tertiary-color);
   color: var(--secondary-color);
   font-size: 47px;
-  font-weight: 600;
+  font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .price-card .event-name {
