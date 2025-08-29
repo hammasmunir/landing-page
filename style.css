@@ -31,11 +31,11 @@ html {
   overflow-x: hidden;
 }
 .header {
-  background: #f7f7f7;
+  background: #f7f7f7; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 50px 40px;
   position: relative;
 }
 
@@ -63,6 +63,7 @@ nav ul li a {
   border: 1px solid #d2d2d2;
   text-decoration: none;
   transition: all 0.5s ease;
+  font-size: 14px;
   &:hover {
     background: #135945;
     border: 1px solid transparent;
