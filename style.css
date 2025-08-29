@@ -426,13 +426,14 @@ nav ul li a {
 .event-info {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 160px;
 }
 
 .event-info p {
   font-size: 40px;
   color: #252525;
   line-height: 66px;
+  font-weight: 400;
 }
 
 .event-info p span {
