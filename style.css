@@ -1,9 +1,127 @@
+/* Quasimoda Regular */
 @font-face {
   font-family: 'Quasimoda';
-  src: url('/fonts/Quasimoda\ Regular.otf') format('woff2'),
-    url('/fonts/Quasimoda-Regular.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Regular.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda Light */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda Light Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda Medium */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda Medium Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda SemiBold */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda SemiBold Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda Bold */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda Bold Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda ExtraBold */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda ExtraBold Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda ExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quasimoda Black */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quasimoda Black Italic */
+@font-face {
+  font-family: 'Quasimoda';
+  src: url('/fonts/Quasimoda v3.000/Quasimoda BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 :root {
   --primary-color: #252525;
@@ -171,15 +289,19 @@ nav ul li a {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 40px;
 }
 
 .logo-container p {
   font-size: 90px;
   font-weight: bolder;
 }
+.logo-container img:first-child {
+  max-width: 100px;
+  width: 100%;
+}
 .logo-container img:last-child {
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -226,17 +348,19 @@ nav ul li a {
 .hero-text-container {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
+  gap: 10px;}
 
 .hero-text-container span {
   font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
 }
 
 .hero-text-container p {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 5px;
+  line-height: 24px;
 }
 
 .how-to-join {
@@ -258,14 +382,13 @@ nav ul li a {
   gap: 22px;
   background: #ffffff;
   padding: 8px 7px 8px 40px;
-
   border-radius: 45px;
   transition: all 0.5s ease;
   color: black;
 }
 
 .how-to-join a p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
 }
 
