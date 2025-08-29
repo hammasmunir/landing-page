@@ -1262,6 +1262,7 @@ nav ul li a {
   align-items: center;
   max-width: 1600px;
   position: relative;
+  margin: 0 auto;
   width: 100%;
   padding: 120px 20px;
   .bg-img{
